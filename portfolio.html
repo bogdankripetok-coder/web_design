@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPolio | My Portfolio</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+        body { background-color: #FFB6BA; color: #000000; min-height: 100vh; display: flex; flex-direction: column; }
+        header { background-color: #FFB6C8; padding: 20px 50px; display: flex; justify-content: flex-end; }
+        nav { display: flex; gap: 30px; }
+        nav a { text-decoration: none; color: #000000; font-size: 18px; font-weight: 500; padding: 5px 10px; transition: all 0.3s ease; border-bottom: 2px solid transparent;}
+        nav a:hover, nav a.active { color: #bd1e51; border-bottom: 2px solid #000000; }
+        
+        .back-arrow { position: absolute; top: 90px; right: 40px; text-decoration: none; color: #000000; font-size: 24px; }
+
+        .portfolio-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+            flex: 1;
+        }
+
+        .portfolio-intro h2 {
+            font-size: 42px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            text-decoration: underline;
+        }
+
+        .portfolio-intro p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .works-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .work-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            border: 2px solid #f472b6;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="lab13.html">About me</a>
+            <a href="portfolio.html" class="active">Portfolio</a>
+            <a href="contacts.html">Contacts</a>
+        </nav>
+    </header>
+
+    <a href="lab13.html" class="back-arrow">↩</a>
+
+    <main class="portfolio-container">
+        <div class="portfolio-intro">
+            <h2>My portfolio</h2>
+            <p>Welcome to my creative and technical space. Here you can find a curated selection of my latest academic and personal projects. Each work reflects my journey in mastering frontend layout engineering, web standards, and user-centered design practices.</p>
+            
+            <div class="work-item" style="margin-top: 20px;">
+                <img src="lab_code.jpg" alt="Lab Code Screenshot">
+            </div>
+        </div>
+
+        <div class="works-gallery">
+            <div class="work-item">
+                <img src="lab_form.jpg" alt="Lab Form Screenshot">
+            </div>
+            <div class="work-item">
+                <img src="lab_shoe.jpg" alt="Lab Shoe Design">
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

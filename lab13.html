@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPolio | Home</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #FFB6BA;
+            color: #000000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #FFB6C8;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover, nav a.active {
+            color: #bd1e51;
+            border-bottom: 2px solid #000000;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+            align-items: center;
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 42px;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        .hero-text .subtitle {
+            font-size: 20px;
+            color: #334155;
+            margin-bottom: 50px;
+        }
+
+        .logo-box img {
+            max-width: 280px;
+            height: auto;
+            display: block;
+        }
+
+        .profile-img-box img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 4px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects-section {
+            grid-column: 1 / -1;
+            margin-top: 40px;
+        }
+
+        .projects-section h2 {
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background-color: #FFB6C8;
+            padding: 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 1.5;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .back-arrow {
+            position: absolute;
+            top: 90px;
+            right: 40px;
+            text-decoration: none;
+            color: #000000;
+            font-size: 24px;
+            transition: transform 0.2s;
+        }
+        
+        .back-arrow:hover {
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            header {
+                justify-content: center;
+                padding: 20px;
+            }
+            .logo-box img, .profile-img-box img {
+                margin: 0 auto;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="aboutme.html" class="active">About me</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contacts.html">Contacts</a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <div class="hero-text">
+            <div class="logo-box">
+                <img src="logo.jpg" alt="DEVPOLIO STUDENT DEVELOPER">
+            </div>
+            <h1>Hello , i'm Bohdan Pyryzhok</h1>
+            <div class="subtitle">Student of software engineering</div>
+        </div>
+
+        <div class="profile-img-box">
+            <img src="kanye.jpg" alt="Bohdan Pyryzhok">
+        </div>
+
+        <div class="projects-section">
+            <h2>There is my projects :</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <strong>Competitor Analysis & Briefing</strong><br><br>
+                    Conducted in-depth research into modern developer portfolios. Developed a comprehensive website design brief, defining the target audience, core goals, and functional requirements for the future platform.
+                </div>
+                <div class="project-card">
+                    <strong>Brand Identity Design</strong><br><br>
+                    Created a versatile logo in three variations (vertical, horizontal, and achromatic) along with an animated GIF banner. Selected the optimal font pairing and color palette designed specifically for a modern Dark Mode layout.
+                </div>
+                <div class="project-card">
+                    <strong>UI/UX Prototyping</strong><br><br>
+                    Designed the website architecture using a logical mind map. Created low-fidelity wireframes for both Desktop and Mobile devices, focusing on seamless user experience (UX) and clean visual hierarchy.
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
